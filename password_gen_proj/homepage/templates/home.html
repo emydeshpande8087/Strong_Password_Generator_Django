@@ -1,0 +1,57 @@
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">GENPASS </a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Page 1</a></li>
+      <li><a href="#">Page 2</a></li>
+      <li><a href="#">Page 3</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+<div class="container">
+  <div class="jumbotron" style=" text-align: center ">
+   <h2> Select Options to generate a random password </h2>
+
+  </div>
+
+</div>
+
+<div class="container text-center">
+
+
+    <hr>
+    <form action="{% url 'password' %} ">
+        <label for="length">Select the password length</label>
+
+        <select name="length" style="text-align:left" id="length">
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13" selected>13</option>
+            <option value="14">14</option>
+
+        </select>
+        <br>
+
+        <input type="checkbox" name="uppercase"> Upper case </input>
+        <br>
+        <input type="checkbox" name="numbers"> Numbers </input>
+        <br>
+        <input type="checkbox" name="special"> Special characters </input>
+        <br>
+
+        <hr>
+        <input type="submit"> Generate Now ! </input>
+    </form>
+
+</div>
